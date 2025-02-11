@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reembolso por KM</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h2>Reembolso por KM</h2>
+    <table id="kmTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Km Rodado</th>
+                <th>Valor por Km (R$)</th>
+                <th>Total a Pagar (R$)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" value="João Silva"></td>
+                <td><input type="date" value="2025-02-10"></td>
+                <td><input type="number" value="15" oninput="calcularTotal(this)"></td>
+                <td><input type="number" value="1.5" step="0.1" oninput="calcularTotal(this)"></td>
+                <td class="total">22.5</td>
+                <td><button onclick="removerLinha(this)">Remover</button></td>
+            </tr>
+            <tr>
+                <td><input type="text" value="Maria Souza"></td>
+                <td><input type="date" value="2025-02-11"></td>
+                <td><input type="number" value="20" oninput="calcularTotal(this)"></td>
+                <td><input type="number" value="1.5" step="0.1" oninput="calcularTotal(this)"></td>
+                <td class="total">30</td>
+                <td><button onclick="removerLinha(this)">Remover</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="adicionarLinha()">Adicionar Funcionário</button>
+    <button onclick="salvarComoPlanilha()">Salvar para Planilha</button>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
